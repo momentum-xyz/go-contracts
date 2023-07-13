@@ -31,17 +31,18 @@ var (
 
 // StakingStakedBy is an auto generated low-level Go binding around an user-defined struct.
 type StakingStakedBy struct {
-	User               common.Address
-	TotalAmount        *big.Int
-	DadAmount          *big.Int
-	MomAmount          *big.Int
-	Timestamp          *big.Int
-	EffectiveTimestamp *big.Int
+	User                  common.Address
+	TotalAmount           *big.Int
+	DadAmount             *big.Int
+	MomAmount             *big.Int
+	Timestamp             *big.Int
+	EffectiveTimestampMom *big.Int
+	EffectiveTimestampDad *big.Int
 }
 
 // StakingMetaData contains all meta data concerning the Staking contract.
 var StakingMetaData = &bind.MetaData{
-	ABI: "[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"previousAdmin\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"newAdmin\",\"type\":\"address\"}],\"name\":\"AdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beacon\",\"type\":\"address\"}],\"name\":\"BeaconUpgraded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"total_claimed\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"total_staked\",\"type\":\"uint256\"}],\"name\":\"ClaimedUnstaked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"total_rewards_claimed\",\"type\":\"uint256\"}],\"name\":\"OdysseyRewardsClaimed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"odyssey_from\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"odyssey_to\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"enumStaking.Token\",\"name\":\"token\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"total_staked_from\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"total_staked_to\",\"type\":\"uint256\"}],\"name\":\"Restake\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"total_rewards_claimed\",\"type\":\"uint256\"}],\"name\":\"RewardsClaimed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"blocknumber\",\"type\":\"uint256\"}],\"name\":\"RewardsUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"previousAdminRole\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"newAdminRole\",\"type\":\"bytes32\"}],\"name\":\"RoleAdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleRevoked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount_staked\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"enumStaking.Token\",\"name\":\"token\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"total_staked\",\"type\":\"uint256\"}],\"name\":\"Stake\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"string\",\"name\":\"state\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"from\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"to\",\"type\":\"uint256\"}],\"name\":\"StateUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount_unstaked\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"enumStaking.Token\",\"name\":\"token\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"total_staked\",\"type\":\"uint256\"}],\"name\":\"Unstake\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"implementation\",\"type\":\"address\"}],\"name\":\"Upgraded\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEFAULT_ADMIN_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MANAGER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"}],\"name\":\"claim_rewards\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"claim_rewards\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"claim_unstaked_tokens\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"dad_token\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleAdmin\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"odyssey\",\"type\":\"uint256\"}],\"name\":\"get_staked_by\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"total_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"dad_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"mom_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"effective_timestamp\",\"type\":\"uint256\"}],\"internalType\":\"structStaking.StakedBy[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"get_staked_odysseys\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grantRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_mom_token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_dad_token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_odyssey_nfts\",\"type\":\"address\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"last_rewards_calculation\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"locking_period\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"mom_token\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"odyssey_nfts\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"odysseys\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"total_staked_into\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"total_stakers\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"total_rewards\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"staked_odysseys_index\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"proxiableUUID\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"renounceRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"from_odyssey_id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"to_odyssey_id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"enumStaking.Token\",\"name\":\"token\",\"type\":\"uint8\"}],\"name\":\"restake\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"revokeRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"rewards_timeout\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"enumStaking.Token\",\"name\":\"token\",\"type\":\"uint8\"}],\"name\":\"stake\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"staked_by\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"total_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"dad_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"mom_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"effective_timestamp\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"staked_by_indexes\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"staked_odysseys\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"stakers\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"total_rewards\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"total_staked\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"dad_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"mom_amount\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"total_staked\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"},{\"internalType\":\"enumStaking.Token\",\"name\":\"token\",\"type\":\"uint8\"}],\"name\":\"unstake\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"unstakes\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"dad_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"mom_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"untaking_timestamp\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_locking_period\",\"type\":\"uint256\"}],\"name\":\"update_locking_period\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"addresses\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"stakers_amounts\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"odysseys_ids\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"odysseys_amounts\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"name\":\"update_rewards\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_rewards_timeout\",\"type\":\"uint256\"}],\"name\":\"update_rewards_timeout\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newImplementation\",\"type\":\"address\"}],\"name\":\"upgradeTo\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newImplementation\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"upgradeToAndCall\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"}]",
+	ABI: "[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"previousAdmin\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"newAdmin\",\"type\":\"address\"}],\"name\":\"AdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beacon\",\"type\":\"address\"}],\"name\":\"BeaconUpgraded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"total_claimed\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"total_staked\",\"type\":\"uint256\"}],\"name\":\"ClaimedUnstaked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"total_mom_rewards_claimed\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"total_dad_rewards_claimed\",\"type\":\"uint256\"}],\"name\":\"OdysseyRewardsClaimed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"odyssey_from\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"odyssey_to\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"enumStaking.Token\",\"name\":\"token\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"total_staked_from\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"total_staked_to\",\"type\":\"uint256\"}],\"name\":\"Restake\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"total_mom_rewards_claimed\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"total_dad_rewards_claimed\",\"type\":\"uint256\"}],\"name\":\"RewardsClaimed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"blocknumber\",\"type\":\"uint256\"}],\"name\":\"RewardsUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"previousAdminRole\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"newAdminRole\",\"type\":\"bytes32\"}],\"name\":\"RoleAdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleRevoked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount_staked\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"enumStaking.Token\",\"name\":\"token\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"total_staked\",\"type\":\"uint256\"}],\"name\":\"Stake\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"string\",\"name\":\"state\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"from\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"to\",\"type\":\"uint256\"}],\"name\":\"StateUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount_unstaked\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"enumStaking.Token\",\"name\":\"token\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"total_staked\",\"type\":\"uint256\"}],\"name\":\"Unstake\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"implementation\",\"type\":\"address\"}],\"name\":\"Upgraded\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEFAULT_ADMIN_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MANAGER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"}],\"name\":\"claim_rewards\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"claim_rewards\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"claim_unstaked_tokens\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"dad_token\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleAdmin\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"odyssey\",\"type\":\"uint256\"}],\"name\":\"get_staked_by\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"total_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"dad_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"mom_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"effective_timestamp_mom\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"effective_timestamp_dad\",\"type\":\"uint256\"}],\"internalType\":\"structStaking.StakedBy[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"get_staked_odysseys\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grantRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_mom_token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_dad_token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_odyssey_nfts\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_treasury\",\"type\":\"address\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"last_rewards_calculation\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"locking_period\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"mom_token\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"odyssey_nfts\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"odysseys\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"total_staked_into\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"total_stakers\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"total_rewards\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"dad_rewards\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"mom_rewards\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"staked_odysseys_index\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"proxiableUUID\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"renounceRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"from_odyssey_id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"to_odyssey_id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"enumStaking.Token\",\"name\":\"token\",\"type\":\"uint8\"}],\"name\":\"restake\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"revokeRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"rewards_timeout\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"enumStaking.Token\",\"name\":\"token\",\"type\":\"uint8\"}],\"name\":\"stake\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"staked_by\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"total_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"dad_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"mom_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"effective_timestamp_mom\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"effective_timestamp_dad\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"staked_by_indexes\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"staked_odysseys\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"stakers\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"total_rewards\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"dad_rewards\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"mom_rewards\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"total_staked\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"dad_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"mom_amount\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"total_staked\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"treasury\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"},{\"internalType\":\"enumStaking.Token\",\"name\":\"token\",\"type\":\"uint8\"}],\"name\":\"unstake\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"unstakes\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"dad_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"mom_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"unstaking_timestamp\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_locking_period\",\"type\":\"uint256\"}],\"name\":\"update_locking_period\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"addresses\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"stakers_amount_mom\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"stakers_amount_dad\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"odysseys_ids\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"odysseys_amount_mom\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"odysseys_amount_dad\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256\",\"name\":\"treasury_ammount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"name\":\"update_rewards\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_rewards_timeout\",\"type\":\"uint256\"}],\"name\":\"update_rewards_timeout\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newImplementation\",\"type\":\"address\"}],\"name\":\"upgradeTo\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newImplementation\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"upgradeToAndCall\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"}]",
 }
 
 // StakingABI is the input ABI used to generate the binding from.
@@ -316,7 +317,7 @@ func (_Staking *StakingCallerSession) GetRoleAdmin(role [32]byte) ([32]byte, err
 
 // GetStakedBy is a free data retrieval call binding the contract method 0xe22619ec.
 //
-// Solidity: function get_staked_by(uint256 odyssey) view returns((address,uint256,uint256,uint256,uint256,uint256)[])
+// Solidity: function get_staked_by(uint256 odyssey) view returns((address,uint256,uint256,uint256,uint256,uint256,uint256)[])
 func (_Staking *StakingCaller) GetStakedBy(opts *bind.CallOpts, odyssey *big.Int) ([]StakingStakedBy, error) {
 	var out []interface{}
 	err := _Staking.contract.Call(opts, &out, "get_staked_by", odyssey)
@@ -333,14 +334,14 @@ func (_Staking *StakingCaller) GetStakedBy(opts *bind.CallOpts, odyssey *big.Int
 
 // GetStakedBy is a free data retrieval call binding the contract method 0xe22619ec.
 //
-// Solidity: function get_staked_by(uint256 odyssey) view returns((address,uint256,uint256,uint256,uint256,uint256)[])
+// Solidity: function get_staked_by(uint256 odyssey) view returns((address,uint256,uint256,uint256,uint256,uint256,uint256)[])
 func (_Staking *StakingSession) GetStakedBy(odyssey *big.Int) ([]StakingStakedBy, error) {
 	return _Staking.Contract.GetStakedBy(&_Staking.CallOpts, odyssey)
 }
 
 // GetStakedBy is a free data retrieval call binding the contract method 0xe22619ec.
 //
-// Solidity: function get_staked_by(uint256 odyssey) view returns((address,uint256,uint256,uint256,uint256,uint256)[])
+// Solidity: function get_staked_by(uint256 odyssey) view returns((address,uint256,uint256,uint256,uint256,uint256,uint256)[])
 func (_Staking *StakingCallerSession) GetStakedBy(odyssey *big.Int) ([]StakingStakedBy, error) {
 	return _Staking.Contract.GetStakedBy(&_Staking.CallOpts, odyssey)
 }
@@ -533,12 +534,14 @@ func (_Staking *StakingCallerSession) OdysseyNfts() (common.Address, error) {
 
 // Odysseys is a free data retrieval call binding the contract method 0x6efdf56c.
 //
-// Solidity: function odysseys(uint256 ) view returns(uint256 odyssey_id, uint256 total_staked_into, uint256 total_stakers, uint256 total_rewards, uint256 staked_odysseys_index)
+// Solidity: function odysseys(uint256 ) view returns(uint256 odyssey_id, uint256 total_staked_into, uint256 total_stakers, uint256 total_rewards, uint256 dad_rewards, uint256 mom_rewards, uint256 staked_odysseys_index)
 func (_Staking *StakingCaller) Odysseys(opts *bind.CallOpts, arg0 *big.Int) (struct {
 	OdysseyId           *big.Int
 	TotalStakedInto     *big.Int
 	TotalStakers        *big.Int
 	TotalRewards        *big.Int
+	DadRewards          *big.Int
+	MomRewards          *big.Int
 	StakedOdysseysIndex *big.Int
 }, error) {
 	var out []interface{}
@@ -549,6 +552,8 @@ func (_Staking *StakingCaller) Odysseys(opts *bind.CallOpts, arg0 *big.Int) (str
 		TotalStakedInto     *big.Int
 		TotalStakers        *big.Int
 		TotalRewards        *big.Int
+		DadRewards          *big.Int
+		MomRewards          *big.Int
 		StakedOdysseysIndex *big.Int
 	})
 	if err != nil {
@@ -559,7 +564,9 @@ func (_Staking *StakingCaller) Odysseys(opts *bind.CallOpts, arg0 *big.Int) (str
 	outstruct.TotalStakedInto = *abi.ConvertType(out[1], new(*big.Int)).(**big.Int)
 	outstruct.TotalStakers = *abi.ConvertType(out[2], new(*big.Int)).(**big.Int)
 	outstruct.TotalRewards = *abi.ConvertType(out[3], new(*big.Int)).(**big.Int)
-	outstruct.StakedOdysseysIndex = *abi.ConvertType(out[4], new(*big.Int)).(**big.Int)
+	outstruct.DadRewards = *abi.ConvertType(out[4], new(*big.Int)).(**big.Int)
+	outstruct.MomRewards = *abi.ConvertType(out[5], new(*big.Int)).(**big.Int)
+	outstruct.StakedOdysseysIndex = *abi.ConvertType(out[6], new(*big.Int)).(**big.Int)
 
 	return *outstruct, err
 
@@ -567,12 +574,14 @@ func (_Staking *StakingCaller) Odysseys(opts *bind.CallOpts, arg0 *big.Int) (str
 
 // Odysseys is a free data retrieval call binding the contract method 0x6efdf56c.
 //
-// Solidity: function odysseys(uint256 ) view returns(uint256 odyssey_id, uint256 total_staked_into, uint256 total_stakers, uint256 total_rewards, uint256 staked_odysseys_index)
+// Solidity: function odysseys(uint256 ) view returns(uint256 odyssey_id, uint256 total_staked_into, uint256 total_stakers, uint256 total_rewards, uint256 dad_rewards, uint256 mom_rewards, uint256 staked_odysseys_index)
 func (_Staking *StakingSession) Odysseys(arg0 *big.Int) (struct {
 	OdysseyId           *big.Int
 	TotalStakedInto     *big.Int
 	TotalStakers        *big.Int
 	TotalRewards        *big.Int
+	DadRewards          *big.Int
+	MomRewards          *big.Int
 	StakedOdysseysIndex *big.Int
 }, error) {
 	return _Staking.Contract.Odysseys(&_Staking.CallOpts, arg0)
@@ -580,12 +589,14 @@ func (_Staking *StakingSession) Odysseys(arg0 *big.Int) (struct {
 
 // Odysseys is a free data retrieval call binding the contract method 0x6efdf56c.
 //
-// Solidity: function odysseys(uint256 ) view returns(uint256 odyssey_id, uint256 total_staked_into, uint256 total_stakers, uint256 total_rewards, uint256 staked_odysseys_index)
+// Solidity: function odysseys(uint256 ) view returns(uint256 odyssey_id, uint256 total_staked_into, uint256 total_stakers, uint256 total_rewards, uint256 dad_rewards, uint256 mom_rewards, uint256 staked_odysseys_index)
 func (_Staking *StakingCallerSession) Odysseys(arg0 *big.Int) (struct {
 	OdysseyId           *big.Int
 	TotalStakedInto     *big.Int
 	TotalStakers        *big.Int
 	TotalRewards        *big.Int
+	DadRewards          *big.Int
+	MomRewards          *big.Int
 	StakedOdysseysIndex *big.Int
 }, error) {
 	return _Staking.Contract.Odysseys(&_Staking.CallOpts, arg0)
@@ -655,25 +666,27 @@ func (_Staking *StakingCallerSession) RewardsTimeout() (*big.Int, error) {
 
 // StakedBy is a free data retrieval call binding the contract method 0xa2e9c3be.
 //
-// Solidity: function staked_by(uint256 , uint256 ) view returns(address user, uint256 total_amount, uint256 dad_amount, uint256 mom_amount, uint256 timestamp, uint256 effective_timestamp)
+// Solidity: function staked_by(uint256 , uint256 ) view returns(address user, uint256 total_amount, uint256 dad_amount, uint256 mom_amount, uint256 timestamp, uint256 effective_timestamp_mom, uint256 effective_timestamp_dad)
 func (_Staking *StakingCaller) StakedBy(opts *bind.CallOpts, arg0 *big.Int, arg1 *big.Int) (struct {
-	User               common.Address
-	TotalAmount        *big.Int
-	DadAmount          *big.Int
-	MomAmount          *big.Int
-	Timestamp          *big.Int
-	EffectiveTimestamp *big.Int
+	User                  common.Address
+	TotalAmount           *big.Int
+	DadAmount             *big.Int
+	MomAmount             *big.Int
+	Timestamp             *big.Int
+	EffectiveTimestampMom *big.Int
+	EffectiveTimestampDad *big.Int
 }, error) {
 	var out []interface{}
 	err := _Staking.contract.Call(opts, &out, "staked_by", arg0, arg1)
 
 	outstruct := new(struct {
-		User               common.Address
-		TotalAmount        *big.Int
-		DadAmount          *big.Int
-		MomAmount          *big.Int
-		Timestamp          *big.Int
-		EffectiveTimestamp *big.Int
+		User                  common.Address
+		TotalAmount           *big.Int
+		DadAmount             *big.Int
+		MomAmount             *big.Int
+		Timestamp             *big.Int
+		EffectiveTimestampMom *big.Int
+		EffectiveTimestampDad *big.Int
 	})
 	if err != nil {
 		return *outstruct, err
@@ -684,7 +697,8 @@ func (_Staking *StakingCaller) StakedBy(opts *bind.CallOpts, arg0 *big.Int, arg1
 	outstruct.DadAmount = *abi.ConvertType(out[2], new(*big.Int)).(**big.Int)
 	outstruct.MomAmount = *abi.ConvertType(out[3], new(*big.Int)).(**big.Int)
 	outstruct.Timestamp = *abi.ConvertType(out[4], new(*big.Int)).(**big.Int)
-	outstruct.EffectiveTimestamp = *abi.ConvertType(out[5], new(*big.Int)).(**big.Int)
+	outstruct.EffectiveTimestampMom = *abi.ConvertType(out[5], new(*big.Int)).(**big.Int)
+	outstruct.EffectiveTimestampDad = *abi.ConvertType(out[6], new(*big.Int)).(**big.Int)
 
 	return *outstruct, err
 
@@ -692,28 +706,30 @@ func (_Staking *StakingCaller) StakedBy(opts *bind.CallOpts, arg0 *big.Int, arg1
 
 // StakedBy is a free data retrieval call binding the contract method 0xa2e9c3be.
 //
-// Solidity: function staked_by(uint256 , uint256 ) view returns(address user, uint256 total_amount, uint256 dad_amount, uint256 mom_amount, uint256 timestamp, uint256 effective_timestamp)
+// Solidity: function staked_by(uint256 , uint256 ) view returns(address user, uint256 total_amount, uint256 dad_amount, uint256 mom_amount, uint256 timestamp, uint256 effective_timestamp_mom, uint256 effective_timestamp_dad)
 func (_Staking *StakingSession) StakedBy(arg0 *big.Int, arg1 *big.Int) (struct {
-	User               common.Address
-	TotalAmount        *big.Int
-	DadAmount          *big.Int
-	MomAmount          *big.Int
-	Timestamp          *big.Int
-	EffectiveTimestamp *big.Int
+	User                  common.Address
+	TotalAmount           *big.Int
+	DadAmount             *big.Int
+	MomAmount             *big.Int
+	Timestamp             *big.Int
+	EffectiveTimestampMom *big.Int
+	EffectiveTimestampDad *big.Int
 }, error) {
 	return _Staking.Contract.StakedBy(&_Staking.CallOpts, arg0, arg1)
 }
 
 // StakedBy is a free data retrieval call binding the contract method 0xa2e9c3be.
 //
-// Solidity: function staked_by(uint256 , uint256 ) view returns(address user, uint256 total_amount, uint256 dad_amount, uint256 mom_amount, uint256 timestamp, uint256 effective_timestamp)
+// Solidity: function staked_by(uint256 , uint256 ) view returns(address user, uint256 total_amount, uint256 dad_amount, uint256 mom_amount, uint256 timestamp, uint256 effective_timestamp_mom, uint256 effective_timestamp_dad)
 func (_Staking *StakingCallerSession) StakedBy(arg0 *big.Int, arg1 *big.Int) (struct {
-	User               common.Address
-	TotalAmount        *big.Int
-	DadAmount          *big.Int
-	MomAmount          *big.Int
-	Timestamp          *big.Int
-	EffectiveTimestamp *big.Int
+	User                  common.Address
+	TotalAmount           *big.Int
+	DadAmount             *big.Int
+	MomAmount             *big.Int
+	Timestamp             *big.Int
+	EffectiveTimestampMom *big.Int
+	EffectiveTimestampDad *big.Int
 }, error) {
 	return _Staking.Contract.StakedBy(&_Staking.CallOpts, arg0, arg1)
 }
@@ -782,10 +798,12 @@ func (_Staking *StakingCallerSession) StakedOdysseys(arg0 *big.Int) (*big.Int, e
 
 // Stakers is a free data retrieval call binding the contract method 0x9168ae72.
 //
-// Solidity: function stakers(address ) view returns(address user, uint256 total_rewards, uint256 total_staked, uint256 dad_amount, uint256 mom_amount)
+// Solidity: function stakers(address ) view returns(address user, uint256 total_rewards, uint256 dad_rewards, uint256 mom_rewards, uint256 total_staked, uint256 dad_amount, uint256 mom_amount)
 func (_Staking *StakingCaller) Stakers(opts *bind.CallOpts, arg0 common.Address) (struct {
 	User         common.Address
 	TotalRewards *big.Int
+	DadRewards   *big.Int
+	MomRewards   *big.Int
 	TotalStaked  *big.Int
 	DadAmount    *big.Int
 	MomAmount    *big.Int
@@ -796,6 +814,8 @@ func (_Staking *StakingCaller) Stakers(opts *bind.CallOpts, arg0 common.Address)
 	outstruct := new(struct {
 		User         common.Address
 		TotalRewards *big.Int
+		DadRewards   *big.Int
+		MomRewards   *big.Int
 		TotalStaked  *big.Int
 		DadAmount    *big.Int
 		MomAmount    *big.Int
@@ -806,9 +826,11 @@ func (_Staking *StakingCaller) Stakers(opts *bind.CallOpts, arg0 common.Address)
 
 	outstruct.User = *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
 	outstruct.TotalRewards = *abi.ConvertType(out[1], new(*big.Int)).(**big.Int)
-	outstruct.TotalStaked = *abi.ConvertType(out[2], new(*big.Int)).(**big.Int)
-	outstruct.DadAmount = *abi.ConvertType(out[3], new(*big.Int)).(**big.Int)
-	outstruct.MomAmount = *abi.ConvertType(out[4], new(*big.Int)).(**big.Int)
+	outstruct.DadRewards = *abi.ConvertType(out[2], new(*big.Int)).(**big.Int)
+	outstruct.MomRewards = *abi.ConvertType(out[3], new(*big.Int)).(**big.Int)
+	outstruct.TotalStaked = *abi.ConvertType(out[4], new(*big.Int)).(**big.Int)
+	outstruct.DadAmount = *abi.ConvertType(out[5], new(*big.Int)).(**big.Int)
+	outstruct.MomAmount = *abi.ConvertType(out[6], new(*big.Int)).(**big.Int)
 
 	return *outstruct, err
 
@@ -816,10 +838,12 @@ func (_Staking *StakingCaller) Stakers(opts *bind.CallOpts, arg0 common.Address)
 
 // Stakers is a free data retrieval call binding the contract method 0x9168ae72.
 //
-// Solidity: function stakers(address ) view returns(address user, uint256 total_rewards, uint256 total_staked, uint256 dad_amount, uint256 mom_amount)
+// Solidity: function stakers(address ) view returns(address user, uint256 total_rewards, uint256 dad_rewards, uint256 mom_rewards, uint256 total_staked, uint256 dad_amount, uint256 mom_amount)
 func (_Staking *StakingSession) Stakers(arg0 common.Address) (struct {
 	User         common.Address
 	TotalRewards *big.Int
+	DadRewards   *big.Int
+	MomRewards   *big.Int
 	TotalStaked  *big.Int
 	DadAmount    *big.Int
 	MomAmount    *big.Int
@@ -829,10 +853,12 @@ func (_Staking *StakingSession) Stakers(arg0 common.Address) (struct {
 
 // Stakers is a free data retrieval call binding the contract method 0x9168ae72.
 //
-// Solidity: function stakers(address ) view returns(address user, uint256 total_rewards, uint256 total_staked, uint256 dad_amount, uint256 mom_amount)
+// Solidity: function stakers(address ) view returns(address user, uint256 total_rewards, uint256 dad_rewards, uint256 mom_rewards, uint256 total_staked, uint256 dad_amount, uint256 mom_amount)
 func (_Staking *StakingCallerSession) Stakers(arg0 common.Address) (struct {
 	User         common.Address
 	TotalRewards *big.Int
+	DadRewards   *big.Int
+	MomRewards   *big.Int
 	TotalStaked  *big.Int
 	DadAmount    *big.Int
 	MomAmount    *big.Int
@@ -902,21 +928,52 @@ func (_Staking *StakingCallerSession) TotalStaked() (*big.Int, error) {
 	return _Staking.Contract.TotalStaked(&_Staking.CallOpts)
 }
 
+// Treasury is a free data retrieval call binding the contract method 0x61d027b3.
+//
+// Solidity: function treasury() view returns(address)
+func (_Staking *StakingCaller) Treasury(opts *bind.CallOpts) (common.Address, error) {
+	var out []interface{}
+	err := _Staking.contract.Call(opts, &out, "treasury")
+
+	if err != nil {
+		return *new(common.Address), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
+
+	return out0, err
+
+}
+
+// Treasury is a free data retrieval call binding the contract method 0x61d027b3.
+//
+// Solidity: function treasury() view returns(address)
+func (_Staking *StakingSession) Treasury() (common.Address, error) {
+	return _Staking.Contract.Treasury(&_Staking.CallOpts)
+}
+
+// Treasury is a free data retrieval call binding the contract method 0x61d027b3.
+//
+// Solidity: function treasury() view returns(address)
+func (_Staking *StakingCallerSession) Treasury() (common.Address, error) {
+	return _Staking.Contract.Treasury(&_Staking.CallOpts)
+}
+
 // Unstakes is a free data retrieval call binding the contract method 0xdfef94b4.
 //
-// Solidity: function unstakes(address , uint256 ) view returns(uint256 dad_amount, uint256 mom_amount, uint256 untaking_timestamp)
+// Solidity: function unstakes(address , uint256 ) view returns(uint256 dad_amount, uint256 mom_amount, uint256 unstaking_timestamp)
 func (_Staking *StakingCaller) Unstakes(opts *bind.CallOpts, arg0 common.Address, arg1 *big.Int) (struct {
-	DadAmount         *big.Int
-	MomAmount         *big.Int
-	UntakingTimestamp *big.Int
+	DadAmount          *big.Int
+	MomAmount          *big.Int
+	UnstakingTimestamp *big.Int
 }, error) {
 	var out []interface{}
 	err := _Staking.contract.Call(opts, &out, "unstakes", arg0, arg1)
 
 	outstruct := new(struct {
-		DadAmount         *big.Int
-		MomAmount         *big.Int
-		UntakingTimestamp *big.Int
+		DadAmount          *big.Int
+		MomAmount          *big.Int
+		UnstakingTimestamp *big.Int
 	})
 	if err != nil {
 		return *outstruct, err
@@ -924,7 +981,7 @@ func (_Staking *StakingCaller) Unstakes(opts *bind.CallOpts, arg0 common.Address
 
 	outstruct.DadAmount = *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
 	outstruct.MomAmount = *abi.ConvertType(out[1], new(*big.Int)).(**big.Int)
-	outstruct.UntakingTimestamp = *abi.ConvertType(out[2], new(*big.Int)).(**big.Int)
+	outstruct.UnstakingTimestamp = *abi.ConvertType(out[2], new(*big.Int)).(**big.Int)
 
 	return *outstruct, err
 
@@ -932,22 +989,22 @@ func (_Staking *StakingCaller) Unstakes(opts *bind.CallOpts, arg0 common.Address
 
 // Unstakes is a free data retrieval call binding the contract method 0xdfef94b4.
 //
-// Solidity: function unstakes(address , uint256 ) view returns(uint256 dad_amount, uint256 mom_amount, uint256 untaking_timestamp)
+// Solidity: function unstakes(address , uint256 ) view returns(uint256 dad_amount, uint256 mom_amount, uint256 unstaking_timestamp)
 func (_Staking *StakingSession) Unstakes(arg0 common.Address, arg1 *big.Int) (struct {
-	DadAmount         *big.Int
-	MomAmount         *big.Int
-	UntakingTimestamp *big.Int
+	DadAmount          *big.Int
+	MomAmount          *big.Int
+	UnstakingTimestamp *big.Int
 }, error) {
 	return _Staking.Contract.Unstakes(&_Staking.CallOpts, arg0, arg1)
 }
 
 // Unstakes is a free data retrieval call binding the contract method 0xdfef94b4.
 //
-// Solidity: function unstakes(address , uint256 ) view returns(uint256 dad_amount, uint256 mom_amount, uint256 untaking_timestamp)
+// Solidity: function unstakes(address , uint256 ) view returns(uint256 dad_amount, uint256 mom_amount, uint256 unstaking_timestamp)
 func (_Staking *StakingCallerSession) Unstakes(arg0 common.Address, arg1 *big.Int) (struct {
-	DadAmount         *big.Int
-	MomAmount         *big.Int
-	UntakingTimestamp *big.Int
+	DadAmount          *big.Int
+	MomAmount          *big.Int
+	UnstakingTimestamp *big.Int
 }, error) {
 	return _Staking.Contract.Unstakes(&_Staking.CallOpts, arg0, arg1)
 }
@@ -1036,25 +1093,25 @@ func (_Staking *StakingTransactorSession) GrantRole(role [32]byte, account commo
 	return _Staking.Contract.GrantRole(&_Staking.TransactOpts, role, account)
 }
 
-// Initialize is a paid mutator transaction binding the contract method 0xc0c53b8b.
+// Initialize is a paid mutator transaction binding the contract method 0xf8c8765e.
 //
-// Solidity: function initialize(address _mom_token, address _dad_token, address _odyssey_nfts) returns()
-func (_Staking *StakingTransactor) Initialize(opts *bind.TransactOpts, _mom_token common.Address, _dad_token common.Address, _odyssey_nfts common.Address) (*types.Transaction, error) {
-	return _Staking.contract.Transact(opts, "initialize", _mom_token, _dad_token, _odyssey_nfts)
+// Solidity: function initialize(address _mom_token, address _dad_token, address _odyssey_nfts, address _treasury) returns()
+func (_Staking *StakingTransactor) Initialize(opts *bind.TransactOpts, _mom_token common.Address, _dad_token common.Address, _odyssey_nfts common.Address, _treasury common.Address) (*types.Transaction, error) {
+	return _Staking.contract.Transact(opts, "initialize", _mom_token, _dad_token, _odyssey_nfts, _treasury)
 }
 
-// Initialize is a paid mutator transaction binding the contract method 0xc0c53b8b.
+// Initialize is a paid mutator transaction binding the contract method 0xf8c8765e.
 //
-// Solidity: function initialize(address _mom_token, address _dad_token, address _odyssey_nfts) returns()
-func (_Staking *StakingSession) Initialize(_mom_token common.Address, _dad_token common.Address, _odyssey_nfts common.Address) (*types.Transaction, error) {
-	return _Staking.Contract.Initialize(&_Staking.TransactOpts, _mom_token, _dad_token, _odyssey_nfts)
+// Solidity: function initialize(address _mom_token, address _dad_token, address _odyssey_nfts, address _treasury) returns()
+func (_Staking *StakingSession) Initialize(_mom_token common.Address, _dad_token common.Address, _odyssey_nfts common.Address, _treasury common.Address) (*types.Transaction, error) {
+	return _Staking.Contract.Initialize(&_Staking.TransactOpts, _mom_token, _dad_token, _odyssey_nfts, _treasury)
 }
 
-// Initialize is a paid mutator transaction binding the contract method 0xc0c53b8b.
+// Initialize is a paid mutator transaction binding the contract method 0xf8c8765e.
 //
-// Solidity: function initialize(address _mom_token, address _dad_token, address _odyssey_nfts) returns()
-func (_Staking *StakingTransactorSession) Initialize(_mom_token common.Address, _dad_token common.Address, _odyssey_nfts common.Address) (*types.Transaction, error) {
-	return _Staking.Contract.Initialize(&_Staking.TransactOpts, _mom_token, _dad_token, _odyssey_nfts)
+// Solidity: function initialize(address _mom_token, address _dad_token, address _odyssey_nfts, address _treasury) returns()
+func (_Staking *StakingTransactorSession) Initialize(_mom_token common.Address, _dad_token common.Address, _odyssey_nfts common.Address, _treasury common.Address) (*types.Transaction, error) {
+	return _Staking.Contract.Initialize(&_Staking.TransactOpts, _mom_token, _dad_token, _odyssey_nfts, _treasury)
 }
 
 // RenounceRole is a paid mutator transaction binding the contract method 0x36568abe.
@@ -1122,21 +1179,21 @@ func (_Staking *StakingTransactorSession) RevokeRole(role [32]byte, account comm
 
 // Stake is a paid mutator transaction binding the contract method 0x748e6856.
 //
-// Solidity: function stake(uint256 odyssey_id, uint256 amount, uint8 token) payable returns()
+// Solidity: function stake(uint256 odyssey_id, uint256 amount, uint8 token) returns()
 func (_Staking *StakingTransactor) Stake(opts *bind.TransactOpts, odyssey_id *big.Int, amount *big.Int, token uint8) (*types.Transaction, error) {
 	return _Staking.contract.Transact(opts, "stake", odyssey_id, amount, token)
 }
 
 // Stake is a paid mutator transaction binding the contract method 0x748e6856.
 //
-// Solidity: function stake(uint256 odyssey_id, uint256 amount, uint8 token) payable returns()
+// Solidity: function stake(uint256 odyssey_id, uint256 amount, uint8 token) returns()
 func (_Staking *StakingSession) Stake(odyssey_id *big.Int, amount *big.Int, token uint8) (*types.Transaction, error) {
 	return _Staking.Contract.Stake(&_Staking.TransactOpts, odyssey_id, amount, token)
 }
 
 // Stake is a paid mutator transaction binding the contract method 0x748e6856.
 //
-// Solidity: function stake(uint256 odyssey_id, uint256 amount, uint8 token) payable returns()
+// Solidity: function stake(uint256 odyssey_id, uint256 amount, uint8 token) returns()
 func (_Staking *StakingTransactorSession) Stake(odyssey_id *big.Int, amount *big.Int, token uint8) (*types.Transaction, error) {
 	return _Staking.Contract.Stake(&_Staking.TransactOpts, odyssey_id, amount, token)
 }
@@ -1183,25 +1240,25 @@ func (_Staking *StakingTransactorSession) UpdateLockingPeriod(_locking_period *b
 	return _Staking.Contract.UpdateLockingPeriod(&_Staking.TransactOpts, _locking_period)
 }
 
-// UpdateRewards is a paid mutator transaction binding the contract method 0x96137177.
+// UpdateRewards is a paid mutator transaction binding the contract method 0x2564a93f.
 //
-// Solidity: function update_rewards(address[] addresses, uint256[] stakers_amounts, uint256[] odysseys_ids, uint256[] odysseys_amounts, uint256 timestamp) returns()
-func (_Staking *StakingTransactor) UpdateRewards(opts *bind.TransactOpts, addresses []common.Address, stakers_amounts []*big.Int, odysseys_ids []*big.Int, odysseys_amounts []*big.Int, timestamp *big.Int) (*types.Transaction, error) {
-	return _Staking.contract.Transact(opts, "update_rewards", addresses, stakers_amounts, odysseys_ids, odysseys_amounts, timestamp)
+// Solidity: function update_rewards(address[] addresses, uint256[] stakers_amount_mom, uint256[] stakers_amount_dad, uint256[] odysseys_ids, uint256[] odysseys_amount_mom, uint256[] odysseys_amount_dad, uint256 treasury_ammount, uint256 timestamp) returns()
+func (_Staking *StakingTransactor) UpdateRewards(opts *bind.TransactOpts, addresses []common.Address, stakers_amount_mom []*big.Int, stakers_amount_dad []*big.Int, odysseys_ids []*big.Int, odysseys_amount_mom []*big.Int, odysseys_amount_dad []*big.Int, treasury_ammount *big.Int, timestamp *big.Int) (*types.Transaction, error) {
+	return _Staking.contract.Transact(opts, "update_rewards", addresses, stakers_amount_mom, stakers_amount_dad, odysseys_ids, odysseys_amount_mom, odysseys_amount_dad, treasury_ammount, timestamp)
 }
 
-// UpdateRewards is a paid mutator transaction binding the contract method 0x96137177.
+// UpdateRewards is a paid mutator transaction binding the contract method 0x2564a93f.
 //
-// Solidity: function update_rewards(address[] addresses, uint256[] stakers_amounts, uint256[] odysseys_ids, uint256[] odysseys_amounts, uint256 timestamp) returns()
-func (_Staking *StakingSession) UpdateRewards(addresses []common.Address, stakers_amounts []*big.Int, odysseys_ids []*big.Int, odysseys_amounts []*big.Int, timestamp *big.Int) (*types.Transaction, error) {
-	return _Staking.Contract.UpdateRewards(&_Staking.TransactOpts, addresses, stakers_amounts, odysseys_ids, odysseys_amounts, timestamp)
+// Solidity: function update_rewards(address[] addresses, uint256[] stakers_amount_mom, uint256[] stakers_amount_dad, uint256[] odysseys_ids, uint256[] odysseys_amount_mom, uint256[] odysseys_amount_dad, uint256 treasury_ammount, uint256 timestamp) returns()
+func (_Staking *StakingSession) UpdateRewards(addresses []common.Address, stakers_amount_mom []*big.Int, stakers_amount_dad []*big.Int, odysseys_ids []*big.Int, odysseys_amount_mom []*big.Int, odysseys_amount_dad []*big.Int, treasury_ammount *big.Int, timestamp *big.Int) (*types.Transaction, error) {
+	return _Staking.Contract.UpdateRewards(&_Staking.TransactOpts, addresses, stakers_amount_mom, stakers_amount_dad, odysseys_ids, odysseys_amount_mom, odysseys_amount_dad, treasury_ammount, timestamp)
 }
 
-// UpdateRewards is a paid mutator transaction binding the contract method 0x96137177.
+// UpdateRewards is a paid mutator transaction binding the contract method 0x2564a93f.
 //
-// Solidity: function update_rewards(address[] addresses, uint256[] stakers_amounts, uint256[] odysseys_ids, uint256[] odysseys_amounts, uint256 timestamp) returns()
-func (_Staking *StakingTransactorSession) UpdateRewards(addresses []common.Address, stakers_amounts []*big.Int, odysseys_ids []*big.Int, odysseys_amounts []*big.Int, timestamp *big.Int) (*types.Transaction, error) {
-	return _Staking.Contract.UpdateRewards(&_Staking.TransactOpts, addresses, stakers_amounts, odysseys_ids, odysseys_amounts, timestamp)
+// Solidity: function update_rewards(address[] addresses, uint256[] stakers_amount_mom, uint256[] stakers_amount_dad, uint256[] odysseys_ids, uint256[] odysseys_amount_mom, uint256[] odysseys_amount_dad, uint256 treasury_ammount, uint256 timestamp) returns()
+func (_Staking *StakingTransactorSession) UpdateRewards(addresses []common.Address, stakers_amount_mom []*big.Int, stakers_amount_dad []*big.Int, odysseys_ids []*big.Int, odysseys_amount_mom []*big.Int, odysseys_amount_dad []*big.Int, treasury_ammount *big.Int, timestamp *big.Int) (*types.Transaction, error) {
+	return _Staking.Contract.UpdateRewards(&_Staking.TransactOpts, addresses, stakers_amount_mom, stakers_amount_dad, odysseys_ids, odysseys_amount_mom, odysseys_amount_dad, treasury_ammount, timestamp)
 }
 
 // UpdateRewardsTimeout is a paid mutator transaction binding the contract method 0x969f7d46.
@@ -1895,14 +1952,15 @@ func (it *StakingOdysseyRewardsClaimedIterator) Close() error {
 
 // StakingOdysseyRewardsClaimed represents a OdysseyRewardsClaimed event raised by the Staking contract.
 type StakingOdysseyRewardsClaimed struct {
-	OdysseyId           *big.Int
-	TotalRewardsClaimed *big.Int
-	Raw                 types.Log // Blockchain specific contextual infos
+	OdysseyId              *big.Int
+	TotalMomRewardsClaimed *big.Int
+	TotalDadRewardsClaimed *big.Int
+	Raw                    types.Log // Blockchain specific contextual infos
 }
 
-// FilterOdysseyRewardsClaimed is a free log retrieval operation binding the contract event 0x2bb8f99e42894785a1520f311e41259fa055076d23bbf66400646dcdc86d080f.
+// FilterOdysseyRewardsClaimed is a free log retrieval operation binding the contract event 0xd2cd4e555ff21ca5b3e062f46ca367ade0dc15004407960a7eaa8760fb808b25.
 //
-// Solidity: event OdysseyRewardsClaimed(uint256 indexed odyssey_id, uint256 total_rewards_claimed)
+// Solidity: event OdysseyRewardsClaimed(uint256 indexed odyssey_id, uint256 total_mom_rewards_claimed, uint256 total_dad_rewards_claimed)
 func (_Staking *StakingFilterer) FilterOdysseyRewardsClaimed(opts *bind.FilterOpts, odyssey_id []*big.Int) (*StakingOdysseyRewardsClaimedIterator, error) {
 
 	var odyssey_idRule []interface{}
@@ -1917,9 +1975,9 @@ func (_Staking *StakingFilterer) FilterOdysseyRewardsClaimed(opts *bind.FilterOp
 	return &StakingOdysseyRewardsClaimedIterator{contract: _Staking.contract, event: "OdysseyRewardsClaimed", logs: logs, sub: sub}, nil
 }
 
-// WatchOdysseyRewardsClaimed is a free log subscription operation binding the contract event 0x2bb8f99e42894785a1520f311e41259fa055076d23bbf66400646dcdc86d080f.
+// WatchOdysseyRewardsClaimed is a free log subscription operation binding the contract event 0xd2cd4e555ff21ca5b3e062f46ca367ade0dc15004407960a7eaa8760fb808b25.
 //
-// Solidity: event OdysseyRewardsClaimed(uint256 indexed odyssey_id, uint256 total_rewards_claimed)
+// Solidity: event OdysseyRewardsClaimed(uint256 indexed odyssey_id, uint256 total_mom_rewards_claimed, uint256 total_dad_rewards_claimed)
 func (_Staking *StakingFilterer) WatchOdysseyRewardsClaimed(opts *bind.WatchOpts, sink chan<- *StakingOdysseyRewardsClaimed, odyssey_id []*big.Int) (event.Subscription, error) {
 
 	var odyssey_idRule []interface{}
@@ -1959,9 +2017,9 @@ func (_Staking *StakingFilterer) WatchOdysseyRewardsClaimed(opts *bind.WatchOpts
 	}), nil
 }
 
-// ParseOdysseyRewardsClaimed is a log parse operation binding the contract event 0x2bb8f99e42894785a1520f311e41259fa055076d23bbf66400646dcdc86d080f.
+// ParseOdysseyRewardsClaimed is a log parse operation binding the contract event 0xd2cd4e555ff21ca5b3e062f46ca367ade0dc15004407960a7eaa8760fb808b25.
 //
-// Solidity: event OdysseyRewardsClaimed(uint256 indexed odyssey_id, uint256 total_rewards_claimed)
+// Solidity: event OdysseyRewardsClaimed(uint256 indexed odyssey_id, uint256 total_mom_rewards_claimed, uint256 total_dad_rewards_claimed)
 func (_Staking *StakingFilterer) ParseOdysseyRewardsClaimed(log types.Log) (*StakingOdysseyRewardsClaimed, error) {
 	event := new(StakingOdysseyRewardsClaimed)
 	if err := _Staking.contract.UnpackLog(event, "OdysseyRewardsClaimed", log); err != nil {
@@ -2206,14 +2264,15 @@ func (it *StakingRewardsClaimedIterator) Close() error {
 
 // StakingRewardsClaimed represents a RewardsClaimed event raised by the Staking contract.
 type StakingRewardsClaimed struct {
-	User                common.Address
-	TotalRewardsClaimed *big.Int
-	Raw                 types.Log // Blockchain specific contextual infos
+	User                   common.Address
+	TotalMomRewardsClaimed *big.Int
+	TotalDadRewardsClaimed *big.Int
+	Raw                    types.Log // Blockchain specific contextual infos
 }
 
-// FilterRewardsClaimed is a free log retrieval operation binding the contract event 0xfc30cddea38e2bf4d6ea7d3f9ed3b6ad7f176419f4963bd81318067a4aee73fe.
+// FilterRewardsClaimed is a free log retrieval operation binding the contract event 0xdacbdde355ba930696a362ea6738feb9f8bd52dfb3d81947558fd3217e23e325.
 //
-// Solidity: event RewardsClaimed(address indexed user, uint256 total_rewards_claimed)
+// Solidity: event RewardsClaimed(address indexed user, uint256 total_mom_rewards_claimed, uint256 total_dad_rewards_claimed)
 func (_Staking *StakingFilterer) FilterRewardsClaimed(opts *bind.FilterOpts, user []common.Address) (*StakingRewardsClaimedIterator, error) {
 
 	var userRule []interface{}
@@ -2228,9 +2287,9 @@ func (_Staking *StakingFilterer) FilterRewardsClaimed(opts *bind.FilterOpts, use
 	return &StakingRewardsClaimedIterator{contract: _Staking.contract, event: "RewardsClaimed", logs: logs, sub: sub}, nil
 }
 
-// WatchRewardsClaimed is a free log subscription operation binding the contract event 0xfc30cddea38e2bf4d6ea7d3f9ed3b6ad7f176419f4963bd81318067a4aee73fe.
+// WatchRewardsClaimed is a free log subscription operation binding the contract event 0xdacbdde355ba930696a362ea6738feb9f8bd52dfb3d81947558fd3217e23e325.
 //
-// Solidity: event RewardsClaimed(address indexed user, uint256 total_rewards_claimed)
+// Solidity: event RewardsClaimed(address indexed user, uint256 total_mom_rewards_claimed, uint256 total_dad_rewards_claimed)
 func (_Staking *StakingFilterer) WatchRewardsClaimed(opts *bind.WatchOpts, sink chan<- *StakingRewardsClaimed, user []common.Address) (event.Subscription, error) {
 
 	var userRule []interface{}
@@ -2270,9 +2329,9 @@ func (_Staking *StakingFilterer) WatchRewardsClaimed(opts *bind.WatchOpts, sink 
 	}), nil
 }
 
-// ParseRewardsClaimed is a log parse operation binding the contract event 0xfc30cddea38e2bf4d6ea7d3f9ed3b6ad7f176419f4963bd81318067a4aee73fe.
+// ParseRewardsClaimed is a log parse operation binding the contract event 0xdacbdde355ba930696a362ea6738feb9f8bd52dfb3d81947558fd3217e23e325.
 //
-// Solidity: event RewardsClaimed(address indexed user, uint256 total_rewards_claimed)
+// Solidity: event RewardsClaimed(address indexed user, uint256 total_mom_rewards_claimed, uint256 total_dad_rewards_claimed)
 func (_Staking *StakingFilterer) ParseRewardsClaimed(log types.Log) (*StakingRewardsClaimed, error) {
 	event := new(StakingRewardsClaimed)
 	if err := _Staking.contract.UnpackLog(event, "RewardsClaimed", log); err != nil {

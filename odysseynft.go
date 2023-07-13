@@ -31,7 +31,7 @@ var (
 
 // OdysseynftMetaData contains all meta data concerning the Odysseynft contract.
 var OdysseynftMetaData = &bind.MetaData{
-	ABI: "[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"name_\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"symbol_\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"maxTokens_\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maxOdysseysPerWallet_\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"customBaseURI\",\"type\":\"string\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"approved\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"ApprovalForAll\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_fromTokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_toTokenId\",\"type\":\"uint256\"}],\"name\":\"BatchMetadataUpdate\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"MetadataUpdate\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Paused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"string\",\"name\":\"state\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"from\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"to\",\"type\":\"uint256\"}],\"name\":\"StateUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"string\",\"name\":\"state\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"from\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"to\",\"type\":\"string\"}],\"name\":\"StateUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Unpaused\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"currentId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"exists\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getApproved\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"maxOdysseysPerWallet\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"maxTokens\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"odysseys\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ownerOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"paused\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"name\":\"safeMint\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"setApprovalForAll\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"maxOdysseysPerWallet_\",\"type\":\"uint256\"}],\"name\":\"setMaxOdysseysPerWallet\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"maxTokens_\",\"type\":\"uint256\"}],\"name\":\"setMaxTokens\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"baseURI\",\"type\":\"string\"}],\"name\":\"setbaseURI\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"tokenURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"unpause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]",
+	ABI: "[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"name_\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"symbol_\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"customBaseURI\",\"type\":\"string\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"approved\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"ApprovalForAll\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_fromTokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_toTokenId\",\"type\":\"uint256\"}],\"name\":\"BatchMetadataUpdate\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"MetadataUpdate\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Paused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"string\",\"name\":\"state\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"from\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"to\",\"type\":\"string\"}],\"name\":\"StateUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Unpaused\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"currentId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"exists\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getApproved\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"odysseys\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ownerOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"paused\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"name\":\"safeMint\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"setApprovalForAll\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"baseURI\",\"type\":\"string\"}],\"name\":\"setbaseURI\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"tokenURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"unpause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]",
 }
 
 // OdysseynftABI is the input ABI used to generate the binding from.
@@ -333,68 +333,6 @@ func (_Odysseynft *OdysseynftSession) IsApprovedForAll(owner common.Address, ope
 // Solidity: function isApprovedForAll(address owner, address operator) view returns(bool)
 func (_Odysseynft *OdysseynftCallerSession) IsApprovedForAll(owner common.Address, operator common.Address) (bool, error) {
 	return _Odysseynft.Contract.IsApprovedForAll(&_Odysseynft.CallOpts, owner, operator)
-}
-
-// MaxOdysseysPerWallet is a free data retrieval call binding the contract method 0xf3dc8eff.
-//
-// Solidity: function maxOdysseysPerWallet() view returns(uint256)
-func (_Odysseynft *OdysseynftCaller) MaxOdysseysPerWallet(opts *bind.CallOpts) (*big.Int, error) {
-	var out []interface{}
-	err := _Odysseynft.contract.Call(opts, &out, "maxOdysseysPerWallet")
-
-	if err != nil {
-		return *new(*big.Int), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
-
-	return out0, err
-
-}
-
-// MaxOdysseysPerWallet is a free data retrieval call binding the contract method 0xf3dc8eff.
-//
-// Solidity: function maxOdysseysPerWallet() view returns(uint256)
-func (_Odysseynft *OdysseynftSession) MaxOdysseysPerWallet() (*big.Int, error) {
-	return _Odysseynft.Contract.MaxOdysseysPerWallet(&_Odysseynft.CallOpts)
-}
-
-// MaxOdysseysPerWallet is a free data retrieval call binding the contract method 0xf3dc8eff.
-//
-// Solidity: function maxOdysseysPerWallet() view returns(uint256)
-func (_Odysseynft *OdysseynftCallerSession) MaxOdysseysPerWallet() (*big.Int, error) {
-	return _Odysseynft.Contract.MaxOdysseysPerWallet(&_Odysseynft.CallOpts)
-}
-
-// MaxTokens is a free data retrieval call binding the contract method 0xe8315742.
-//
-// Solidity: function maxTokens() view returns(uint256)
-func (_Odysseynft *OdysseynftCaller) MaxTokens(opts *bind.CallOpts) (*big.Int, error) {
-	var out []interface{}
-	err := _Odysseynft.contract.Call(opts, &out, "maxTokens")
-
-	if err != nil {
-		return *new(*big.Int), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
-
-	return out0, err
-
-}
-
-// MaxTokens is a free data retrieval call binding the contract method 0xe8315742.
-//
-// Solidity: function maxTokens() view returns(uint256)
-func (_Odysseynft *OdysseynftSession) MaxTokens() (*big.Int, error) {
-	return _Odysseynft.Contract.MaxTokens(&_Odysseynft.CallOpts)
-}
-
-// MaxTokens is a free data retrieval call binding the contract method 0xe8315742.
-//
-// Solidity: function maxTokens() view returns(uint256)
-func (_Odysseynft *OdysseynftCallerSession) MaxTokens() (*big.Int, error) {
-	return _Odysseynft.Contract.MaxTokens(&_Odysseynft.CallOpts)
 }
 
 // Name is a free data retrieval call binding the contract method 0x06fdde03.
@@ -811,48 +749,6 @@ func (_Odysseynft *OdysseynftSession) SetApprovalForAll(operator common.Address,
 // Solidity: function setApprovalForAll(address operator, bool approved) returns()
 func (_Odysseynft *OdysseynftTransactorSession) SetApprovalForAll(operator common.Address, approved bool) (*types.Transaction, error) {
 	return _Odysseynft.Contract.SetApprovalForAll(&_Odysseynft.TransactOpts, operator, approved)
-}
-
-// SetMaxOdysseysPerWallet is a paid mutator transaction binding the contract method 0x60429d9e.
-//
-// Solidity: function setMaxOdysseysPerWallet(uint256 maxOdysseysPerWallet_) returns()
-func (_Odysseynft *OdysseynftTransactor) SetMaxOdysseysPerWallet(opts *bind.TransactOpts, maxOdysseysPerWallet_ *big.Int) (*types.Transaction, error) {
-	return _Odysseynft.contract.Transact(opts, "setMaxOdysseysPerWallet", maxOdysseysPerWallet_)
-}
-
-// SetMaxOdysseysPerWallet is a paid mutator transaction binding the contract method 0x60429d9e.
-//
-// Solidity: function setMaxOdysseysPerWallet(uint256 maxOdysseysPerWallet_) returns()
-func (_Odysseynft *OdysseynftSession) SetMaxOdysseysPerWallet(maxOdysseysPerWallet_ *big.Int) (*types.Transaction, error) {
-	return _Odysseynft.Contract.SetMaxOdysseysPerWallet(&_Odysseynft.TransactOpts, maxOdysseysPerWallet_)
-}
-
-// SetMaxOdysseysPerWallet is a paid mutator transaction binding the contract method 0x60429d9e.
-//
-// Solidity: function setMaxOdysseysPerWallet(uint256 maxOdysseysPerWallet_) returns()
-func (_Odysseynft *OdysseynftTransactorSession) SetMaxOdysseysPerWallet(maxOdysseysPerWallet_ *big.Int) (*types.Transaction, error) {
-	return _Odysseynft.Contract.SetMaxOdysseysPerWallet(&_Odysseynft.TransactOpts, maxOdysseysPerWallet_)
-}
-
-// SetMaxTokens is a paid mutator transaction binding the contract method 0x11e776fe.
-//
-// Solidity: function setMaxTokens(uint256 maxTokens_) returns()
-func (_Odysseynft *OdysseynftTransactor) SetMaxTokens(opts *bind.TransactOpts, maxTokens_ *big.Int) (*types.Transaction, error) {
-	return _Odysseynft.contract.Transact(opts, "setMaxTokens", maxTokens_)
-}
-
-// SetMaxTokens is a paid mutator transaction binding the contract method 0x11e776fe.
-//
-// Solidity: function setMaxTokens(uint256 maxTokens_) returns()
-func (_Odysseynft *OdysseynftSession) SetMaxTokens(maxTokens_ *big.Int) (*types.Transaction, error) {
-	return _Odysseynft.Contract.SetMaxTokens(&_Odysseynft.TransactOpts, maxTokens_)
-}
-
-// SetMaxTokens is a paid mutator transaction binding the contract method 0x11e776fe.
-//
-// Solidity: function setMaxTokens(uint256 maxTokens_) returns()
-func (_Odysseynft *OdysseynftTransactorSession) SetMaxTokens(maxTokens_ *big.Int) (*types.Transaction, error) {
-	return _Odysseynft.Contract.SetMaxTokens(&_Odysseynft.TransactOpts, maxTokens_)
 }
 
 // SetbaseURI is a paid mutator transaction binding the contract method 0x4a44f379.
@@ -1881,14 +1777,14 @@ func (it *OdysseynftStateUpdatedIterator) Close() error {
 // OdysseynftStateUpdated represents a StateUpdated event raised by the Odysseynft contract.
 type OdysseynftStateUpdated struct {
 	State common.Hash
-	From  *big.Int
-	To    *big.Int
+	From  string
+	To    string
 	Raw   types.Log // Blockchain specific contextual infos
 }
 
-// FilterStateUpdated is a free log retrieval operation binding the contract event 0x348b835bd624f424a1ce88f82b74506124327d9b949e2b159c2744cb21310648.
+// FilterStateUpdated is a free log retrieval operation binding the contract event 0xafa0c737e4e73fe7fdffeddcaef6341a14203894766da748e74287e94a32187a.
 //
-// Solidity: event StateUpdated(string indexed state, uint256 from, uint256 to)
+// Solidity: event StateUpdated(string indexed state, string from, string to)
 func (_Odysseynft *OdysseynftFilterer) FilterStateUpdated(opts *bind.FilterOpts, state []string) (*OdysseynftStateUpdatedIterator, error) {
 
 	var stateRule []interface{}
@@ -1903,9 +1799,9 @@ func (_Odysseynft *OdysseynftFilterer) FilterStateUpdated(opts *bind.FilterOpts,
 	return &OdysseynftStateUpdatedIterator{contract: _Odysseynft.contract, event: "StateUpdated", logs: logs, sub: sub}, nil
 }
 
-// WatchStateUpdated is a free log subscription operation binding the contract event 0x348b835bd624f424a1ce88f82b74506124327d9b949e2b159c2744cb21310648.
+// WatchStateUpdated is a free log subscription operation binding the contract event 0xafa0c737e4e73fe7fdffeddcaef6341a14203894766da748e74287e94a32187a.
 //
-// Solidity: event StateUpdated(string indexed state, uint256 from, uint256 to)
+// Solidity: event StateUpdated(string indexed state, string from, string to)
 func (_Odysseynft *OdysseynftFilterer) WatchStateUpdated(opts *bind.WatchOpts, sink chan<- *OdysseynftStateUpdated, state []string) (event.Subscription, error) {
 
 	var stateRule []interface{}
@@ -1945,158 +1841,12 @@ func (_Odysseynft *OdysseynftFilterer) WatchStateUpdated(opts *bind.WatchOpts, s
 	}), nil
 }
 
-// ParseStateUpdated is a log parse operation binding the contract event 0x348b835bd624f424a1ce88f82b74506124327d9b949e2b159c2744cb21310648.
+// ParseStateUpdated is a log parse operation binding the contract event 0xafa0c737e4e73fe7fdffeddcaef6341a14203894766da748e74287e94a32187a.
 //
-// Solidity: event StateUpdated(string indexed state, uint256 from, uint256 to)
+// Solidity: event StateUpdated(string indexed state, string from, string to)
 func (_Odysseynft *OdysseynftFilterer) ParseStateUpdated(log types.Log) (*OdysseynftStateUpdated, error) {
 	event := new(OdysseynftStateUpdated)
 	if err := _Odysseynft.contract.UnpackLog(event, "StateUpdated", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// OdysseynftStateUpdated0Iterator is returned from FilterStateUpdated0 and is used to iterate over the raw logs and unpacked data for StateUpdated0 events raised by the Odysseynft contract.
-type OdysseynftStateUpdated0Iterator struct {
-	Event *OdysseynftStateUpdated0 // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *OdysseynftStateUpdated0Iterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(OdysseynftStateUpdated0)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(OdysseynftStateUpdated0)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *OdysseynftStateUpdated0Iterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *OdysseynftStateUpdated0Iterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// OdysseynftStateUpdated0 represents a StateUpdated0 event raised by the Odysseynft contract.
-type OdysseynftStateUpdated0 struct {
-	State common.Hash
-	From  string
-	To    string
-	Raw   types.Log // Blockchain specific contextual infos
-}
-
-// FilterStateUpdated0 is a free log retrieval operation binding the contract event 0xafa0c737e4e73fe7fdffeddcaef6341a14203894766da748e74287e94a32187a.
-//
-// Solidity: event StateUpdated(string indexed state, string from, string to)
-func (_Odysseynft *OdysseynftFilterer) FilterStateUpdated0(opts *bind.FilterOpts, state []string) (*OdysseynftStateUpdated0Iterator, error) {
-
-	var stateRule []interface{}
-	for _, stateItem := range state {
-		stateRule = append(stateRule, stateItem)
-	}
-
-	logs, sub, err := _Odysseynft.contract.FilterLogs(opts, "StateUpdated0", stateRule)
-	if err != nil {
-		return nil, err
-	}
-	return &OdysseynftStateUpdated0Iterator{contract: _Odysseynft.contract, event: "StateUpdated0", logs: logs, sub: sub}, nil
-}
-
-// WatchStateUpdated0 is a free log subscription operation binding the contract event 0xafa0c737e4e73fe7fdffeddcaef6341a14203894766da748e74287e94a32187a.
-//
-// Solidity: event StateUpdated(string indexed state, string from, string to)
-func (_Odysseynft *OdysseynftFilterer) WatchStateUpdated0(opts *bind.WatchOpts, sink chan<- *OdysseynftStateUpdated0, state []string) (event.Subscription, error) {
-
-	var stateRule []interface{}
-	for _, stateItem := range state {
-		stateRule = append(stateRule, stateItem)
-	}
-
-	logs, sub, err := _Odysseynft.contract.WatchLogs(opts, "StateUpdated0", stateRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(OdysseynftStateUpdated0)
-				if err := _Odysseynft.contract.UnpackLog(event, "StateUpdated0", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseStateUpdated0 is a log parse operation binding the contract event 0xafa0c737e4e73fe7fdffeddcaef6341a14203894766da748e74287e94a32187a.
-//
-// Solidity: event StateUpdated(string indexed state, string from, string to)
-func (_Odysseynft *OdysseynftFilterer) ParseStateUpdated0(log types.Log) (*OdysseynftStateUpdated0, error) {
-	event := new(OdysseynftStateUpdated0)
-	if err := _Odysseynft.contract.UnpackLog(event, "StateUpdated0", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
