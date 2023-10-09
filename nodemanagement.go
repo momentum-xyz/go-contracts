@@ -41,7 +41,7 @@ type NodeManagementNode struct {
 
 // NodemanagementMetaData contains all meta data concerning the Nodemanagement contract.
 var NodemanagementMetaData = &bind.MetaData{
-	ABI: "[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"previousAdmin\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"newAdmin\",\"type\":\"address\"}],\"name\":\"AdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beacon\",\"type\":\"address\"}],\"name\":\"BeaconUpgraded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"old_fee\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"new_fee\",\"type\":\"uint256\"}],\"name\":\"FeeUpdatedEth\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"old_fee\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"new_fee\",\"type\":\"uint256\"}],\"name\":\"FeeUpdatedMom\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"from_node_id\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"to_node_id\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"}],\"name\":\"NodeMgmtEvent\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"}],\"name\":\"NodeRemoved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"old_owner\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"new_owner\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"old_hostname\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"new_hostname\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"old_name\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"new_name\",\"type\":\"string\"}],\"name\":\"NodeUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"implementation\",\"type\":\"address\"}],\"name\":\"Upgraded\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"hostname\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"bytes\",\"name\":\"pubkey\",\"type\":\"bytes\"}],\"name\":\"addNodeWithEth\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"hostname\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"bytes\",\"name\":\"pubkey\",\"type\":\"bytes\"}],\"name\":\"addNodeWithMom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"}],\"name\":\"getNode\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"hostname\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"pubkey\",\"type\":\"bytes\"},{\"internalType\":\"address\",\"name\":\"node_account\",\"type\":\"address\"}],\"internalType\":\"structNodeManagement.Node\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"}],\"name\":\"getNodeForTheOdyssey\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"hostname\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"pubkey\",\"type\":\"bytes\"},{\"internalType\":\"address\",\"name\":\"node_account\",\"type\":\"address\"}],\"internalType\":\"structNodeManagement.Node\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_odyssey_nft\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_treasury\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_feeEth\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_feeMom\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_mom_token\",\"type\":\"address\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"proxiableUUID\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"}],\"name\":\"removeMapping\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"}],\"name\":\"removeNode\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"challenge\",\"type\":\"bytes\"}],\"name\":\"setNodeMapping\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"challenge\",\"type\":\"bytes\"}],\"name\":\"setOdysseyMapping\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"sig\",\"type\":\"bytes\"}],\"name\":\"splitSignature\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"},{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"hostname\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"name\":\"updateNode\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"new_owner\",\"type\":\"address\"}],\"name\":\"updateNodeOwner\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"new_pubkey\",\"type\":\"bytes\"}],\"name\":\"updateNodePubkey\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"new_feeEth\",\"type\":\"uint256\"}],\"name\":\"update_feeEth\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"new_feeMom\",\"type\":\"uint256\"}],\"name\":\"update_feeMom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newImplementation\",\"type\":\"address\"}],\"name\":\"upgradeTo\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newImplementation\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"upgradeToAndCall\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"}]",
+	ABI: "[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"previousAdmin\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"newAdmin\",\"type\":\"address\"}],\"name\":\"AdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beacon\",\"type\":\"address\"}],\"name\":\"BeaconUpgraded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"old_fee\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"new_fee\",\"type\":\"uint256\"}],\"name\":\"FeeUpdatedEth\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"old_fee\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"new_fee\",\"type\":\"uint256\"}],\"name\":\"FeeUpdatedMom\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"from_node_id\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"to_node_id\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"}],\"name\":\"NodeMgmtEvent\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"}],\"name\":\"NodeRemoved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"old_owner\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"new_owner\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"old_hostname\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"new_hostname\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"old_name\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"new_name\",\"type\":\"string\"}],\"name\":\"NodeUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"implementation\",\"type\":\"address\"}],\"name\":\"Upgraded\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"hostname\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"bytes\",\"name\":\"pubkey\",\"type\":\"bytes\"}],\"name\":\"addNodeWithEth\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"hostname\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"bytes\",\"name\":\"pubkey\",\"type\":\"bytes\"}],\"name\":\"addNodeWithMom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"feeETH\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"feeMom\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"}],\"name\":\"getNode\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"hostname\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"pubkey\",\"type\":\"bytes\"},{\"internalType\":\"address\",\"name\":\"node_account\",\"type\":\"address\"}],\"internalType\":\"structNodeManagement.Node\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"}],\"name\":\"getNodeForTheOdyssey\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"hostname\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"pubkey\",\"type\":\"bytes\"},{\"internalType\":\"address\",\"name\":\"node_account\",\"type\":\"address\"}],\"internalType\":\"structNodeManagement.Node\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_odyssey_nft\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_treasury\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_feeEth\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_feeMom\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_mom_token\",\"type\":\"address\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"mom_token\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"node_from_odyssey\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"nodes\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"hostname\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"pubkey\",\"type\":\"bytes\"},{\"internalType\":\"address\",\"name\":\"node_account\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"nodes_index\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"odyssey_nft\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"odysseys\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"odysseys_index\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"proxiableUUID\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"}],\"name\":\"removeMapping\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"}],\"name\":\"removeNode\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"challenge\",\"type\":\"bytes\"}],\"name\":\"setNodeMapping\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"odyssey_id\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"challenge\",\"type\":\"bytes\"}],\"name\":\"setOdysseyMapping\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"sig\",\"type\":\"bytes\"}],\"name\":\"splitSignature\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"},{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"treasury\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"hostname\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"name\":\"updateNode\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"new_owner\",\"type\":\"address\"}],\"name\":\"updateNodeOwner\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"node_id\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"new_pubkey\",\"type\":\"bytes\"}],\"name\":\"updateNodePubkey\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"new_feeEth\",\"type\":\"uint256\"}],\"name\":\"update_feeEth\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"new_feeMom\",\"type\":\"uint256\"}],\"name\":\"update_feeMom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newImplementation\",\"type\":\"address\"}],\"name\":\"upgradeTo\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newImplementation\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"upgradeToAndCall\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"}]",
 }
 
 // NodemanagementABI is the input ABI used to generate the binding from.
@@ -190,6 +190,68 @@ func (_Nodemanagement *NodemanagementTransactorRaw) Transact(opts *bind.Transact
 	return _Nodemanagement.Contract.contract.Transact(opts, method, params...)
 }
 
+// FeeETH is a free data retrieval call binding the contract method 0x4078fca8.
+//
+// Solidity: function feeETH() view returns(uint256)
+func (_Nodemanagement *NodemanagementCaller) FeeETH(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _Nodemanagement.contract.Call(opts, &out, "feeETH")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// FeeETH is a free data retrieval call binding the contract method 0x4078fca8.
+//
+// Solidity: function feeETH() view returns(uint256)
+func (_Nodemanagement *NodemanagementSession) FeeETH() (*big.Int, error) {
+	return _Nodemanagement.Contract.FeeETH(&_Nodemanagement.CallOpts)
+}
+
+// FeeETH is a free data retrieval call binding the contract method 0x4078fca8.
+//
+// Solidity: function feeETH() view returns(uint256)
+func (_Nodemanagement *NodemanagementCallerSession) FeeETH() (*big.Int, error) {
+	return _Nodemanagement.Contract.FeeETH(&_Nodemanagement.CallOpts)
+}
+
+// FeeMom is a free data retrieval call binding the contract method 0x47ad1b70.
+//
+// Solidity: function feeMom() view returns(uint256)
+func (_Nodemanagement *NodemanagementCaller) FeeMom(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _Nodemanagement.contract.Call(opts, &out, "feeMom")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// FeeMom is a free data retrieval call binding the contract method 0x47ad1b70.
+//
+// Solidity: function feeMom() view returns(uint256)
+func (_Nodemanagement *NodemanagementSession) FeeMom() (*big.Int, error) {
+	return _Nodemanagement.Contract.FeeMom(&_Nodemanagement.CallOpts)
+}
+
+// FeeMom is a free data retrieval call binding the contract method 0x47ad1b70.
+//
+// Solidity: function feeMom() view returns(uint256)
+func (_Nodemanagement *NodemanagementCallerSession) FeeMom() (*big.Int, error) {
+	return _Nodemanagement.Contract.FeeMom(&_Nodemanagement.CallOpts)
+}
+
 // GetNode is a free data retrieval call binding the contract method 0x4f0f4aa9.
 //
 // Solidity: function getNode(uint256 node_id) view returns((uint256,string,string,address,bytes,address))
@@ -250,6 +312,271 @@ func (_Nodemanagement *NodemanagementSession) GetNodeForTheOdyssey(odyssey_id *b
 // Solidity: function getNodeForTheOdyssey(uint256 odyssey_id) view returns((uint256,string,string,address,bytes,address))
 func (_Nodemanagement *NodemanagementCallerSession) GetNodeForTheOdyssey(odyssey_id *big.Int) (NodeManagementNode, error) {
 	return _Nodemanagement.Contract.GetNodeForTheOdyssey(&_Nodemanagement.CallOpts, odyssey_id)
+}
+
+// MomToken is a free data retrieval call binding the contract method 0x3a2bb837.
+//
+// Solidity: function mom_token() view returns(address)
+func (_Nodemanagement *NodemanagementCaller) MomToken(opts *bind.CallOpts) (common.Address, error) {
+	var out []interface{}
+	err := _Nodemanagement.contract.Call(opts, &out, "mom_token")
+
+	if err != nil {
+		return *new(common.Address), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
+
+	return out0, err
+
+}
+
+// MomToken is a free data retrieval call binding the contract method 0x3a2bb837.
+//
+// Solidity: function mom_token() view returns(address)
+func (_Nodemanagement *NodemanagementSession) MomToken() (common.Address, error) {
+	return _Nodemanagement.Contract.MomToken(&_Nodemanagement.CallOpts)
+}
+
+// MomToken is a free data retrieval call binding the contract method 0x3a2bb837.
+//
+// Solidity: function mom_token() view returns(address)
+func (_Nodemanagement *NodemanagementCallerSession) MomToken() (common.Address, error) {
+	return _Nodemanagement.Contract.MomToken(&_Nodemanagement.CallOpts)
+}
+
+// NodeFromOdyssey is a free data retrieval call binding the contract method 0xc5e8000e.
+//
+// Solidity: function node_from_odyssey(uint256 ) view returns(uint256 node_id, uint256 index)
+func (_Nodemanagement *NodemanagementCaller) NodeFromOdyssey(opts *bind.CallOpts, arg0 *big.Int) (struct {
+	NodeId *big.Int
+	Index  *big.Int
+}, error) {
+	var out []interface{}
+	err := _Nodemanagement.contract.Call(opts, &out, "node_from_odyssey", arg0)
+
+	outstruct := new(struct {
+		NodeId *big.Int
+		Index  *big.Int
+	})
+	if err != nil {
+		return *outstruct, err
+	}
+
+	outstruct.NodeId = *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+	outstruct.Index = *abi.ConvertType(out[1], new(*big.Int)).(**big.Int)
+
+	return *outstruct, err
+
+}
+
+// NodeFromOdyssey is a free data retrieval call binding the contract method 0xc5e8000e.
+//
+// Solidity: function node_from_odyssey(uint256 ) view returns(uint256 node_id, uint256 index)
+func (_Nodemanagement *NodemanagementSession) NodeFromOdyssey(arg0 *big.Int) (struct {
+	NodeId *big.Int
+	Index  *big.Int
+}, error) {
+	return _Nodemanagement.Contract.NodeFromOdyssey(&_Nodemanagement.CallOpts, arg0)
+}
+
+// NodeFromOdyssey is a free data retrieval call binding the contract method 0xc5e8000e.
+//
+// Solidity: function node_from_odyssey(uint256 ) view returns(uint256 node_id, uint256 index)
+func (_Nodemanagement *NodemanagementCallerSession) NodeFromOdyssey(arg0 *big.Int) (struct {
+	NodeId *big.Int
+	Index  *big.Int
+}, error) {
+	return _Nodemanagement.Contract.NodeFromOdyssey(&_Nodemanagement.CallOpts, arg0)
+}
+
+// Nodes is a free data retrieval call binding the contract method 0x1c53c280.
+//
+// Solidity: function nodes(uint256 ) view returns(uint256 node_id, string name, string hostname, address owner, bytes pubkey, address node_account)
+func (_Nodemanagement *NodemanagementCaller) Nodes(opts *bind.CallOpts, arg0 *big.Int) (struct {
+	NodeId      *big.Int
+	Name        string
+	Hostname    string
+	Owner       common.Address
+	Pubkey      []byte
+	NodeAccount common.Address
+}, error) {
+	var out []interface{}
+	err := _Nodemanagement.contract.Call(opts, &out, "nodes", arg0)
+
+	outstruct := new(struct {
+		NodeId      *big.Int
+		Name        string
+		Hostname    string
+		Owner       common.Address
+		Pubkey      []byte
+		NodeAccount common.Address
+	})
+	if err != nil {
+		return *outstruct, err
+	}
+
+	outstruct.NodeId = *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+	outstruct.Name = *abi.ConvertType(out[1], new(string)).(*string)
+	outstruct.Hostname = *abi.ConvertType(out[2], new(string)).(*string)
+	outstruct.Owner = *abi.ConvertType(out[3], new(common.Address)).(*common.Address)
+	outstruct.Pubkey = *abi.ConvertType(out[4], new([]byte)).(*[]byte)
+	outstruct.NodeAccount = *abi.ConvertType(out[5], new(common.Address)).(*common.Address)
+
+	return *outstruct, err
+
+}
+
+// Nodes is a free data retrieval call binding the contract method 0x1c53c280.
+//
+// Solidity: function nodes(uint256 ) view returns(uint256 node_id, string name, string hostname, address owner, bytes pubkey, address node_account)
+func (_Nodemanagement *NodemanagementSession) Nodes(arg0 *big.Int) (struct {
+	NodeId      *big.Int
+	Name        string
+	Hostname    string
+	Owner       common.Address
+	Pubkey      []byte
+	NodeAccount common.Address
+}, error) {
+	return _Nodemanagement.Contract.Nodes(&_Nodemanagement.CallOpts, arg0)
+}
+
+// Nodes is a free data retrieval call binding the contract method 0x1c53c280.
+//
+// Solidity: function nodes(uint256 ) view returns(uint256 node_id, string name, string hostname, address owner, bytes pubkey, address node_account)
+func (_Nodemanagement *NodemanagementCallerSession) Nodes(arg0 *big.Int) (struct {
+	NodeId      *big.Int
+	Name        string
+	Hostname    string
+	Owner       common.Address
+	Pubkey      []byte
+	NodeAccount common.Address
+}, error) {
+	return _Nodemanagement.Contract.Nodes(&_Nodemanagement.CallOpts, arg0)
+}
+
+// NodesIndex is a free data retrieval call binding the contract method 0xf452ba40.
+//
+// Solidity: function nodes_index(uint256 ) view returns(uint256)
+func (_Nodemanagement *NodemanagementCaller) NodesIndex(opts *bind.CallOpts, arg0 *big.Int) (*big.Int, error) {
+	var out []interface{}
+	err := _Nodemanagement.contract.Call(opts, &out, "nodes_index", arg0)
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// NodesIndex is a free data retrieval call binding the contract method 0xf452ba40.
+//
+// Solidity: function nodes_index(uint256 ) view returns(uint256)
+func (_Nodemanagement *NodemanagementSession) NodesIndex(arg0 *big.Int) (*big.Int, error) {
+	return _Nodemanagement.Contract.NodesIndex(&_Nodemanagement.CallOpts, arg0)
+}
+
+// NodesIndex is a free data retrieval call binding the contract method 0xf452ba40.
+//
+// Solidity: function nodes_index(uint256 ) view returns(uint256)
+func (_Nodemanagement *NodemanagementCallerSession) NodesIndex(arg0 *big.Int) (*big.Int, error) {
+	return _Nodemanagement.Contract.NodesIndex(&_Nodemanagement.CallOpts, arg0)
+}
+
+// OdysseyNft is a free data retrieval call binding the contract method 0x98edac36.
+//
+// Solidity: function odyssey_nft() view returns(address)
+func (_Nodemanagement *NodemanagementCaller) OdysseyNft(opts *bind.CallOpts) (common.Address, error) {
+	var out []interface{}
+	err := _Nodemanagement.contract.Call(opts, &out, "odyssey_nft")
+
+	if err != nil {
+		return *new(common.Address), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
+
+	return out0, err
+
+}
+
+// OdysseyNft is a free data retrieval call binding the contract method 0x98edac36.
+//
+// Solidity: function odyssey_nft() view returns(address)
+func (_Nodemanagement *NodemanagementSession) OdysseyNft() (common.Address, error) {
+	return _Nodemanagement.Contract.OdysseyNft(&_Nodemanagement.CallOpts)
+}
+
+// OdysseyNft is a free data retrieval call binding the contract method 0x98edac36.
+//
+// Solidity: function odyssey_nft() view returns(address)
+func (_Nodemanagement *NodemanagementCallerSession) OdysseyNft() (common.Address, error) {
+	return _Nodemanagement.Contract.OdysseyNft(&_Nodemanagement.CallOpts)
+}
+
+// Odysseys is a free data retrieval call binding the contract method 0x1c257a13.
+//
+// Solidity: function odysseys(uint256 , uint256 ) view returns(uint256)
+func (_Nodemanagement *NodemanagementCaller) Odysseys(opts *bind.CallOpts, arg0 *big.Int, arg1 *big.Int) (*big.Int, error) {
+	var out []interface{}
+	err := _Nodemanagement.contract.Call(opts, &out, "odysseys", arg0, arg1)
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// Odysseys is a free data retrieval call binding the contract method 0x1c257a13.
+//
+// Solidity: function odysseys(uint256 , uint256 ) view returns(uint256)
+func (_Nodemanagement *NodemanagementSession) Odysseys(arg0 *big.Int, arg1 *big.Int) (*big.Int, error) {
+	return _Nodemanagement.Contract.Odysseys(&_Nodemanagement.CallOpts, arg0, arg1)
+}
+
+// Odysseys is a free data retrieval call binding the contract method 0x1c257a13.
+//
+// Solidity: function odysseys(uint256 , uint256 ) view returns(uint256)
+func (_Nodemanagement *NodemanagementCallerSession) Odysseys(arg0 *big.Int, arg1 *big.Int) (*big.Int, error) {
+	return _Nodemanagement.Contract.Odysseys(&_Nodemanagement.CallOpts, arg0, arg1)
+}
+
+// OdysseysIndex is a free data retrieval call binding the contract method 0x16c859bb.
+//
+// Solidity: function odysseys_index(uint256 ) view returns(uint256)
+func (_Nodemanagement *NodemanagementCaller) OdysseysIndex(opts *bind.CallOpts, arg0 *big.Int) (*big.Int, error) {
+	var out []interface{}
+	err := _Nodemanagement.contract.Call(opts, &out, "odysseys_index", arg0)
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// OdysseysIndex is a free data retrieval call binding the contract method 0x16c859bb.
+//
+// Solidity: function odysseys_index(uint256 ) view returns(uint256)
+func (_Nodemanagement *NodemanagementSession) OdysseysIndex(arg0 *big.Int) (*big.Int, error) {
+	return _Nodemanagement.Contract.OdysseysIndex(&_Nodemanagement.CallOpts, arg0)
+}
+
+// OdysseysIndex is a free data retrieval call binding the contract method 0x16c859bb.
+//
+// Solidity: function odysseys_index(uint256 ) view returns(uint256)
+func (_Nodemanagement *NodemanagementCallerSession) OdysseysIndex(arg0 *big.Int) (*big.Int, error) {
+	return _Nodemanagement.Contract.OdysseysIndex(&_Nodemanagement.CallOpts, arg0)
 }
 
 // Owner is a free data retrieval call binding the contract method 0x8da5cb5b.
@@ -345,6 +672,37 @@ func (_Nodemanagement *NodemanagementSession) SplitSignature(sig []byte) (uint8,
 // Solidity: function splitSignature(bytes sig) pure returns(uint8, bytes32, bytes32)
 func (_Nodemanagement *NodemanagementCallerSession) SplitSignature(sig []byte) (uint8, [32]byte, [32]byte, error) {
 	return _Nodemanagement.Contract.SplitSignature(&_Nodemanagement.CallOpts, sig)
+}
+
+// Treasury is a free data retrieval call binding the contract method 0x61d027b3.
+//
+// Solidity: function treasury() view returns(address)
+func (_Nodemanagement *NodemanagementCaller) Treasury(opts *bind.CallOpts) (common.Address, error) {
+	var out []interface{}
+	err := _Nodemanagement.contract.Call(opts, &out, "treasury")
+
+	if err != nil {
+		return *new(common.Address), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
+
+	return out0, err
+
+}
+
+// Treasury is a free data retrieval call binding the contract method 0x61d027b3.
+//
+// Solidity: function treasury() view returns(address)
+func (_Nodemanagement *NodemanagementSession) Treasury() (common.Address, error) {
+	return _Nodemanagement.Contract.Treasury(&_Nodemanagement.CallOpts)
+}
+
+// Treasury is a free data retrieval call binding the contract method 0x61d027b3.
+//
+// Solidity: function treasury() view returns(address)
+func (_Nodemanagement *NodemanagementCallerSession) Treasury() (common.Address, error) {
+	return _Nodemanagement.Contract.Treasury(&_Nodemanagement.CallOpts)
 }
 
 // AddNodeWithEth is a paid mutator transaction binding the contract method 0x69541c1c.
